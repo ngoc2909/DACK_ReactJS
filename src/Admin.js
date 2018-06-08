@@ -25,12 +25,20 @@ class Admin extends Component {
                                         <span className="nav-link-text"><Link to={'/QuanLySanPham'}>Quản lý sản phẩm</Link></span>
                                     </div>
                                 </li>
+                                <li className="nav-item" data-toggle="tooltip" data-placement="right"
+                                    title="Tables">
+                                    <div className="nav-link">
+                                        <i className="fa fa-fw fa-dashboard"></i>
+                                        <span className="nav-link-text"><Link to={'/QuanLyLoaiSanPham'}>Quản lý  loai sản phẩm</Link></span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </nav>
                 </div>
             <Switch>
-            <Route exact path='/QuanLySanPham' component={QuanLySanPham} />
+                <Route exact path='/QuanLySanPham' component={QuanLySanPham} />
+                <Route exact path='/QuanLyLoaiSanPham' component={QuanLyLoaiSanPham} />
             </Switch>
             </Router>
         );
