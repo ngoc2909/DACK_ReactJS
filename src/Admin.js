@@ -40,6 +40,14 @@ class Admin extends Component {
                                     </div>
 
                                 </li>
+                                <li className="nav-item" data-toggle="tooltip" data-placement="right"
+                                    title="Tables">
+                                    <div className="nav-link">
+                                        <i className="fa fa-address-card"></i>
+                                        <span className="nav-link-text"><Link to={'/QuanLyTaiKhoan'}>Quản lý tài khoản</Link></span>
+                                    </div>
+
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -48,6 +56,7 @@ class Admin extends Component {
                 <Route exact path='/QuanLySanPham' component={QuanLySanPham} />
                 <Route exact path='/QuanLyLoaiSanPham' component={QuanLyLoaiSanPham} />
                 <Route exact path='/QuanLyNhaSanXuat' component={QuanLyNhaSanXuat} />
+                <Route exact path='/QuanLyTaiKhoan' component={QuanLyTaiKhoan} />
             </Switch>
             </Router>
         );
