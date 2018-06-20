@@ -56,18 +56,9 @@ class QuanLyLoaiSanPham extends Component {
                                 <div className="container">
 
                     <h2>Quản Lý Loại sản phẩm</h2>
-                        <p><button onClick={this.openModal}>Add new Product</button></p>
+                            
                     {items.map(item => (
                         <div className="card-body">
-                            <Modal
-                                isOpen={this.state.modalIsOpen}
-                                onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                            >
-
-                                <button onClick={this.closeModal}>Close</button>
-                                <ProductCreate />
-                            </Modal>
                             <div className="table-responsive">
                                 <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="1" border="1">
                                     <tr>

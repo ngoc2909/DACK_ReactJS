@@ -15,7 +15,7 @@ class QuanLyNhaSanXuat extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3002/api/nhasanxuat")
+        fetch("https://doanck-expressjs.herokuapp.com/api/nhasanxuat")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -57,9 +57,7 @@ class QuanLyNhaSanXuat extends Component {
                                 <div className="container">
 
                                     <h2>Quản Lý Nhà Sản Xuất</h2>
-                                    <p>
-                                        <button onClick={this.openModal}>Add new Product</button>
-                                    </p>
+                                    <ModalAdd handleAfterAdd={this.props.handleAfterAdd}/>
                                     {items.map(item => (
                                         <div className="card-body">
                                             <Modal
