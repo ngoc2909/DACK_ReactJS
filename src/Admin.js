@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import QuanLySanPham from './components/QuanLySanPham';
-
+import QuanLyLoaiSanPham from './components/QuanLyLoaiSanPham';
+import QuanLyNhaSanXuat from './components/QuanLyNhaSanXuat';
+import QuanLyTaiKhoan from './components/QuanLyTaiKhoan';
 class Admin extends Component {
 
 
