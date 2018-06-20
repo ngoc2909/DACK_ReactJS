@@ -15,7 +15,7 @@ class QuanLySanPham extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3002/api/sanpham")
+        fetch("https://doanck-expressjs.herokuapp.com/api/sanpham")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -64,7 +64,7 @@ render() {
                             <div className="album py-5 bg-light">
                                 <div className="container">
                         <h2>Quản Lý Sản Phẩm</h2>
-                                    <p><button onClick={this.openModal}>Add new Product</button></p>
+                                    <ModalAdd handleAfterAdd={this.props.handleAfterAdd}/>
                      <p>   {items.map(item => (
                             <div className="card-body">
                                 <Modal show={this.state.show} onHide={this.handleClose}
