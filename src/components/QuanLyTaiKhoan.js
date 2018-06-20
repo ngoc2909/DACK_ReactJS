@@ -14,7 +14,7 @@ class QuanLyTaiKhoan extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3002/api/taikhoan")
+        fetch("https://doanck-expressjs.herokuapp.com/api/taikhoan")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -61,18 +61,10 @@ class QuanLyTaiKhoan extends Component {
                             <div className="album py-5 bg-light">
                                 <div className="container">
                                     <h2>Quản Lý Tài Khoản</h2>
-                                    <p><button onClick={this.openModal}>Add new Product</button></p>
+                                    <ModalAdd handleAfterAdd={this.props.handleAfterAdd}/>
                                     <p>   {items.map(item => (
                                         <div className="card-body">
-                                            <Modal
-                                                isOpen={this.state.modalIsOpen}
-                                                onRequestClose={this.closeModal}
-                                                contentLabel="Example Modal"
-                                            >
 
-                                                <button onClick={this.closeModal}>Close</button>
-                                                <ProductCreate />
-                                            </Modal>
                                             <div className="table-responsive">
                                                 <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="1"
                                                        border="1">
@@ -105,14 +97,8 @@ class QuanLyTaiKhoan extends Component {
                                                     </td>
                                                     <td>
                                                         <div className="btn-group">
-                                                            <button type="button"
-                                                                    className="btn btn-sm btn btn-info update-celebrity-class"
-                                                                    value="{{id}}">Edit
-                                                            </button>
-                                                            <button type="button"
-                                                                    className="btn btn-sm btn btn-danger delete-celebrity-class"
-                                                                    value="{{id}}">Delete
-                                                            </button>
+                                                            <Button onClick={this.props.handleEdit}>Edit</Button>
+                                                            <Button onClick={() => this.props.handleDelete(this.props.name)}>Delete</Button>
                                                         </div>
                                                         <footer className="sticky-footer">
                                                             <div className="container">
