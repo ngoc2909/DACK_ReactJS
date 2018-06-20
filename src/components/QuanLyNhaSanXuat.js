@@ -91,14 +91,9 @@ class QuanLyNhaSanXuat extends Component {
                                                     </td>
                                                     <td>
                                                         <div className="btn-group">
-                                                            <button type="button"
-                                                                    className="btn btn-sm btn btn-info update-celebrity-class"
-                                                                    value="{{id}}">Edit
-                                                            </button>
-                                                            <button type="button"
-                                                                    className="btn btn-sm btn btn-danger delete-celebrity-class"
-                                                                    value="{{id}}">Delete
-                                                            </button>
+                                                            <Button onClick={this.handleView}>View</Button>
+                                                            <Button onClick={this.props.handleEdit}>Edit</Button>
+                                                            <Button onClick={() => this.props.handleDelete(this.props.name)}>Delete</Button>
                                                         </div>
                                                         <footer className="sticky-footer">
                                                             <div className="container">

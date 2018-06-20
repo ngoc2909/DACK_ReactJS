@@ -14,7 +14,7 @@ class QuanLyLoaiSanPham extends Component {
         };
     }
     componentDidMount() {
-        fetch("http://localhost:3002/api/loaisanpham")
+        fetch("https://doanck-expressjs.herokuapp.com/api/loaisanpham")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -56,7 +56,7 @@ class QuanLyLoaiSanPham extends Component {
                                 <div className="container">
 
                     <h2>Quản Lý Loại sản phẩm</h2>
-                            
+                                    <ModalAdd handleAfterAdd={this.props.handleAfterAdd}/>
                     {items.map(item => (
                         <div className="card-body">
                             <div className="table-responsive">
@@ -80,14 +80,9 @@ class QuanLyLoaiSanPham extends Component {
                                         </td>
                                         <td>
                                             <div className="btn-group">
-                                                <button type="button"
-                                                        className="btn btn-sm btn btn-info update-celebrity-class"
-                                                        value="{{id}}">Edit
-                                                </button>
-                                                <button type="button"
-                                                        className="btn btn-sm btn btn-danger delete-celebrity-class"
-                                                        value="{{id}}">Delete
-                                                </button>
+                                                <Button onClick={this.handleView}>View</Button>
+                                                <Button onClick={this.props.handleEdit}>Edit</Button>
+                                                <Button onClick={() => this.props.handleDelete(this.props.name)}>Delete</Button>
                                             </div>
                                             <footer className="sticky-footer">
                                                 <div className="container">
