@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ProductCreate from '../ProductCreate';
-import Modal from 'react-modal';
+import {Button } from 'react-bootstrap';
+import '../App.css';
+import ModalAdd from "./ModalAdd";
 
 
 class QuanLyNhaSanXuat extends Component {
@@ -60,15 +61,6 @@ class QuanLyNhaSanXuat extends Component {
                                     <ModalAdd handleAfterAdd={this.props.handleAfterAdd}/>
                                     {items.map(item => (
                                         <div className="card-body">
-                                            <Modal
-                                                isOpen={this.state.modalIsOpen}
-                                                onRequestClose={this.closeModal}
-                                                contentLabel="Example Modal"
-                                            >
-
-                                                <button onClick={this.closeModal}>Close</button>
-                                                <ProductCreate/>
-                                            </Modal>
                                             <div className="table-responsive">
                                                 <table className="table table-bordered" id="dataTable" width="100%"
                                                        cellSpacing="1" border="1">

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ProductCreate from '../ProductCreate';
-import Modal from 'react-modal';
+import {Button } from 'react-bootstrap';
 import '../App.css';
+import ModalAdd from "./ModalAdd";
 
 
 class QuanLyLoaiSanPham extends Component {

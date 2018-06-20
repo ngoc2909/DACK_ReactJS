@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Collapse } from 'react-bootstrap'
-import Modal from 'react-modal';
 import '../App.css';
 import ModalAdd from '../components/ModalAdd';
 
@@ -67,14 +66,6 @@ render() {
                                     <ModalAdd handleAfterAdd={this.props.handleAfterAdd}/>
                      <p>   {items.map(item => (
                             <div className="card-body">
-                                <Modal show={this.state.show} onHide={this.handleClose}
-                                    isOpen={this.state.modalIsOpen}
-                                    onRequestClose={this.closeModal}
-                                    contentLabel="Example Modal"
-                                >
-                                    <button onClick={this.closeModal}>Close</button>
-                                    <ModalAdd/>
-                                </Modal>
                                 <div className="table-responsive">
                                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="1"
                                            border="1">
