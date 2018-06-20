@@ -11,7 +11,7 @@ class ProductList extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3002/api/sanpham")
+        fetch("https://doanck-expressjs.herokuapp.com/api/sanpham")
             .then(res => res.json())
             .then(
                 (result) => {
